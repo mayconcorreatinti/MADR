@@ -23,8 +23,7 @@ Para executar o projeto localmente, siga os passos abaixo:
    ```
 3. Instale as ferramentas necessárias:
    ```bash
-   pip install pipx
-   pipx install poetry
+   pip install poetry-plugin-shell 
    ```
 
 4. Instale as dependências do projeto:
@@ -61,4 +60,5 @@ Para executar o projeto localmente, siga os passos abaixo:
 ## Autor
 
 Desenvolvido por Maycon Corrêa Tinti, baseado no curso de FastAPI ministrado por Eduardo Mendes.
+
 
