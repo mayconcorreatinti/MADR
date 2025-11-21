@@ -105,16 +105,11 @@ async def create_token(
 ):
     response = await session.scalar(Select(User).where(User.email == data.username))
 
-    if response is None:
+    if not response or not verify_password(data.password, response.password):
         raise HTTPException(
             detail="Incorrect username or password!", status_code=HTTPStatus.FORBIDDEN
         )
-
-    if not verify_password(data.password, response.password):
-        raise HTTPException(
-            detail="Incorrect username or password!", status_code=HTTPStatus.FORBIDDEN
-        )
-
+    
     token = get_token(data={"email": response.email})
 
     return {"access_token": token, "token_type": "bearer"}
