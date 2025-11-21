@@ -61,3 +61,4 @@ Para executar o projeto localmente, siga os passos abaixo:
 
 Desenvolvido por Maycon Corrêa Tinti, baseado no curso de FastAPI ministrado por Eduardo Mendes.
 
+
